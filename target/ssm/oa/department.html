@@ -90,17 +90,16 @@
   		var punish = parseFloat(document.getElementById("punish").innerText);
   		var realWage = document.getElementById("realWage");
   		var dayWage = parseFloat(document.getElementById("dayWage").innerText);
-  		console.log(coe);
-  		var realWagetax = basic * coe + reward - punish;
-  		console.log(realWagetax);
+  		var coee = parseFloat(coe)/100;
+  		console.log(coee);
+  		var realWagetax = basic * coee * day * dayWage + workAge + extra * extraWage + allowance - five - reserved + reward - punish;
   		realWage.innerText = realWagetax;
   		/*if(coe == "undefined"){
   			alert("您还没有输入改员工的系数哦~");
   		}
   		else{
   			var realWagetax = basic * coe + reward - punish;
-  			console.log(realWagetax);
-  			document.getElementById(realWage).innerText = realWage;
+  			// document.getElementById(realWage).innerText = realWage;
   		}*/
   	}
   }

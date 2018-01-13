@@ -22,7 +22,7 @@
           <dd><a href="javascript:;">安全设置</a></dd>
         </dl>
       </li>
-      <li class="layui-nav-item"><a href="indexone.html">退出</a></li>
+      <li class="layui-nav-item"><a href="logout.html">退出</a></li>
     </ul>
   </div>
   
@@ -64,10 +64,9 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
+    <!-- all页面有增加删除查找功能的页面 -->
     <div>
-
-
-    	<iframe id="display" src="img/index.jpg" style="width:100%;" frameborder="0" scrolling="no"
+    	<iframe id="display" src="firstpage.html" style="width:100%;" frameborder="0" scrolling="no"
       onload="changeFrameHeight()">
       </iframe>
     </div>
@@ -96,7 +95,8 @@
 
 			//员工考勤跳转搜索
 			document.getElementById("all").onclick = function(){
-				document.getElementById("display").src = "single.html";
+				document.getElementById("display").src = "all.html";
+        //single是调用接口数据的界面
 			}
 			
 			//部门
@@ -105,11 +105,10 @@
   			ddlen[i].onclick = (function dejump(j){
           return function(j){
             // console.log(ddlen[j]);
-            document.getElementById("display").src = "department.html";
+            document.getElementById("display").src = "depart.html";
           }
         })(i);
       }
-
 	</script>
 </body>
 </html>

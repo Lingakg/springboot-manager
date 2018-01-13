@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Responsive tables</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="description" content="An awesome solution for responsive tables with complex data.">
+        <style>
+        	.depart td,th{
+        		width:1%;
+        		height:20px;
+        		border:1px solid;
+        		text-align: center;
+        		line-height: 20px;
+        	}
+        	.depart th{
+        		/*position: absolute;*/
+        		background-color: #ffffcc;
+        		height: 30px;
+        		font-size: 18px;
+        		line-height: 30px;
+        	}
+        	.depart{
+        		width:260%;
+        		position:relative;
+        	}
+        	.dep{
+        		width:100%;
+        		height:300px;
+        		overflow: scroll;
+        	}
+        	.tax{
+        		width:97%;
+        		height: 100%;
+        		text-decoration: none;
+        		outline: none;
+        		margin-top: 2px;
+        	}
+        	.index{
+        		width:97%;
+        		height: 98%;
+        		text-decoration: none;
+        		outline: none;
+        		margin-top: 2px;
+        	}
+        	.dis{
+        		display: none;
+        	}
+    	</style>
+    </head>
+        <div class="dep">
+               <table cellspacing="0" cellpadding="0" border="0" class="depart">
+                    <thead>
+                        <tr>
+                            <th>考勤编号</th>
+                            <th>部门</th>
+                            <th>姓名</th>
+                            <th>应到</th>
+                            <th>实到</th>
+                            <th>迟到</th>
+                            <th>早退</th>
+                            <th>矿工</th>
+                            <th>加班</th>
+                            <th>外出</th>
+                            <th>因公外出</th>
+                            <th>工作时间</th>
+                            <th>应签次数</th>
+                            <th>签到</th>
+                            <th>签退</th>
+                            <th class="dis">税点</th>
+                            <th>系数</th>
+                            <th>奖金</th>
+                            <th>惩罚</th>
+                            <th>一金</th>
+                            <th>五险</th>
+                            <th>基本工资</th>
+                            <th>实际工资</th>
+                            <th>点击</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>110001</td>
+                            <td>生产部</td>
+                            <td>秦剑华</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>276</td>
+                            <td>58</td>
+                            <td>29</td>
+                            <td>28</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">2800</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                        </tr>
+                        <tr>
+                            <td>110002</td>
+                            <td>生产部</td>
+                            <td>李鸿</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>232</td>
+                            <td>58</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">3500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                        </tr>
+                        <tr>
+                            <td>110004</td>
+                            <td>生产部</td>
+                            <td>程光辉</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>240</td>
+                            <td>60</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">4500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                        </tr>
+                        <tr>
+                            <td>110006</td>
+                            <td>生产部</td>
+                            <td>王俊良</td>
+                            <td>31</td>
+                            <td>31</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>248</td>
+                            <td>62</td>
+                            <td>31</td>
+                            <td>31</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">5500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110009</td>
+                            <td>生产部</td>
+                            <td>房玮</td>
+                            <td>18</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>144</td>
+                            <td>36</td>
+                            <td>18</td>
+                            <td>18</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">6500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110010</td>
+                            <td>生产部</td>
+                            <td>郭登爱</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>240</td>
+                            <td>60</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">7500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110012</td>
+                            <td>生产部</td>
+                            <td>刘鑫</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>240</td>
+                            <td>60</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">8500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110014</td>
+                            <td>生产部</td>
+                            <td>曹明兰</td>
+                            <td>27</td>
+                            <td>27</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>257</td>
+                            <td>54</td>
+                            <td>23</td>
+                            <td>25</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">8500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110015</td>
+                            <td>生产部</td>
+                            <td>曹保平</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>276</td>
+                            <td>58</td>
+                            <td>28</td>
+                            <td>28</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">8500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110016</td>
+                            <td>生产部</td>
+                            <td>王志勇</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>240</td>
+                            <td>60</td>
+                            <td>30</td>
+                            <td>29</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">8500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110017</td>
+                            <td>生产部</td>
+                            <td>郭登才</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>276</td>
+                            <td>58</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">3500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110018</td>
+                            <td>生产部</td>
+                            <td>任宝玉</td>
+                            <td>27</td>
+                            <td>27</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>257</td>
+                            <td>54</td>
+                            <td>27</td>
+                            <td>27</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">3500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110019</td>
+                            <td>生产部</td>
+                            <td>靳晓东</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>26</td>
+                            <td>56</td>
+                            <td>28</td>
+                            <td>28</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">3500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                         <tr>
+                            <td>110020</td>
+                            <td>生产部</td>
+                            <td>刘伟</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>240</td>
+                            <td>60</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td  class="dis"><input type="text" name="shuidian" class="tax"/></td>
+                            <td><input type="text" name="shuidian" class="index" /></td>
+                            <td class="reward">200</td>
+                            <td class="punish">100</td>
+                            <td class="one">100</td>
+                            <td class="five">100</td>
+                            <td class="basic">3500</td>
+                            <td class="real"></td>
+                            <td><button>工资</button></td>
+                         </tr>
+                    </tbody>
+                </table>
+            </div>
+        </body>
+	</html>
+<script>
+window.onload = function(){
+	//隔行变色
+	for(var i = 1 ; i < document.getElementsByClassName("depart")[0].getElementsByTagName("tr").length; i++){
+		if(i % 2 == 0) {
+			document.getElementsByClassName("depart")[0].getElementsByTagName("tr")[i].style.backgroundColor = "#f0f0f0";
+		}
+	}
+
+	function cal(ele){
+		console.log(ele.parentNode.parentNode.getElementsByClassName("tax")[ele.index]);
+	}
+
+
+	var tax = document.getElementsByClassName("tax");
+	var basic = document.getElementsByClassName("basic");
+	var btn = document.getElementsByTagName("button");
+	var inEle = document.getElementsByClassName("index");
+	var real = document.getElementsByClassName("real");
+	var reward = document.getElementsByClassName("reward");
+	var punish = document.getElementsByClassName("punish");
+	var one = document.getElementsByClassName("one");
+	var five = document.getElementsByClassName("five");
+	// console.log(inEle[this.index].value);
+	for( var i = 0 ; i<btn.length ; i++){
+		btn[i].index = i;
+		// console.log(i);
+		btn[i].onclick = function(){
+			//添加税点
+			if(basic[this.index].innerText <= 3000){
+				tax[this.index].value = "3%";
+			}
+			else if (basic[this.index].innerText > 3000 && basic[this.index].innerText <= 4500){
+				tax[this.index].value = "10%";
+			}
+			else if (basic[this.index].innerText > 4500 && basic[this.index].innerText <= 5500){
+				tax[this.index].value = "15%";
+			}
+			else if (basic[this.index].innerText > 5500 && basic[this.index].innerText <= 6500){
+				tax[this.index].value = "20%";
+			}
+			else if (basic[this.index].innerText > 6500 && basic[this.index].innerText <= 7500){
+				tax[this.index].value = "25%";
+			}
+			else if (basic[this.index].innerText > 7500 && basic[this.index].innerText <= 8500){
+				tax[this.index].value = "30%";
+			}
+			else if (basic[this.index].innerText > 8500){
+				tax[this.index].value = "40%";
+			}
+			//获取系数
+			// console.log(inEle[this.index].value);
+			var tax1 = parseInt(tax[this.index].value)/100
+			var inn = inEle[this.index].value;
+			if(parseFloat(basic[this.index].innerText) > 3000){
+				var basic1 = parseInt(basic[this.index].innerText - 3000); 
+			}
+			else{
+				basic1 = parseFloat(basic[this.index].innerText);
+			}
+			real[this.index].innerText = parseFloat(basic[this.index].innerText) - parseFloat(basic1*tax1) - parseFloat(basic1*inn) + parseFloat(reward[this.index].innerText) - parseFloat(punish[this.index].innerText) - parseFloat(one[this.index].innerText) - parseFloat(five[this.index].innerText);
+			/*if(inEle[this.index].value != NaN){
+				real[this.index].innerText = basic[this.index] - basic1*tax1 + reward[this.index].innerText - punish[this.index].innerText - one[this.index].innerText - five[this.index].innerText;
+			}
+			else{
+				alert("请输入改员工的系数！");
+			}*/
+			// console.log(parseFloat(basic1*tax1));
+		}
+	}
+}
+</script>

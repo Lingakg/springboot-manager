@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/logout.css"/>
+		<title></title>
+	</head>
+	<bodysss>
+		<h2>欢迎使用旺庄工资管理系统</h2>
+		<div class="homepages">
+			<div class="username">
+				账号：<input id="identity" type="text" name="" id="" value="" /> 
+			</div>
+			<div class="password">
+				密码：<input id="pasd" type="password" />
+			</div>
+			<button id="btn1">登录</button>
+			<button id="btn2">取消</button>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var btn_one = document.getElementById("btn1"),
+		btn_two = document.getElementById("btn2"),
+		name = document.getElementById("identity"),
+		pasd = document.getElementById("pasd");
+		
+	btn_one.onclick = function (){
+		if (name.value==="wangzhuang"||pasd.value==="888888") {
+			open("index.html");
+		}else{
+			alert("请输入正确的管理员密码");	
+		}
+	}
+	btn_two.onclick = function (){
+		name.value="";
+		pasd.value="";
+	}
+</script>

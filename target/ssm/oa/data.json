@@ -3,34 +3,37 @@
 			"id" : "1",
 			"username" : "张三",
 			"sex" : "男",
-			"department" : "技术部", 
-			"post" : "java工程师",
-			"laborhour" : "90h",
-			"salarybeforetax" : "12000",
-			"taxrate" : "10%",
-			"realwages" : "10800"
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "12800",
+			"right" : ""
 		},
 		{
 			"id" : "2",
 			"username" : "李四",
 			"sex" : "男",
-			"department" : "技术部", 
-			"post" : "java工程师",
-			"laborhour" : "90h",
-			"salarybeforetax" : "13000",
-			"taxrate" : "10%",
-			"realwages" : "11800"
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "11800",
+			"right" : ""
 		},
 		{
 			"id" : "3",
 			"username" : "王五",
 			"sex" : "男",
-			"department" : "技术部", 
-			"post" : "java工程师",
-			"laborhour" : "90h",
-			"salarybeforetax" : "14000",
-			"taxrate" : "10%",
-			"realwages" : "12800"
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "13800",
+			"right" : ""
 		}
 	]
 }
