@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>管理系统</title>
+  <link rel="stylesheet" href="./css/layui.css">
+</head>
+<body class="layui-layout-body">
+<!--头部导航区域-->
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">旺庄工资管理系统</div>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                         管理员
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">基本资料</a></dd>
+          <dd><a href="javascript:;">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="logout.html">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域-->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">员工查询</a>
+          <dl class="layui-nav-child">
+            <dd id="all"><a href="javascript:;">员工考勤</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">部门</a>
+          <dl class="layui-nav-child" id="department">
+            <dd ><a href="javascript:;">冶炼生产部</a></dd>
+            <dd><a href="javascript:;">焦化生产部</a></dd>
+            <dd><a href="javascript:;">动力生产部</a></dd>
+            <dd><a href="javascript:;">铸造生产部</a></dd>
+            <dd><a href="javascript:;">总经理办公室</a></dd>
+            <dd><a href="javascript:;">督查科</a></dd>
+            <dd><a href="javascript:;">安全部</a></dd>
+            <dd><a href="javascript:;">供应科</a></dd>
+            <dd><a href="javascript:;">销售部</a></dd>
+            <dd><a href="javascript:;">工程技术部</a></dd>
+            <dd><a href="javascript:;">车队</a></dd>
+            <dd><a href="javascript:;">财务部</a></dd>
+            <dd><a href="javascript:;">原料部</a></dd>
+            <dd><a href="javascript:;">质检部</a></dd>
+            <dd><a href="javascript:;">环保部</a></dd>
+            <dd><a href="javascript:;">职业健康部</a></dd>
+            <dd><a href="javascript:;">后勤服务部</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <!-- all页面有增加删除查找功能的页面 -->
+    <div>
+    	<iframe id="display" src="firstpage.html" style="width:100%;" frameborder="0" scrolling="no"
+      onload="changeFrameHeight()">
+      </iframe>
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    ©旺庄工资管理系统
+  </div>
+</div>
+
+<script src="./js/layui.js"></script>
+	<script>
+			layui.use('element', function(){
+			  var element = layui.element;
+			});
+			
+      //设置iframe标签高度为自适应
+      function changeFrameHeight(){
+        var ifm= document.getElementById("display"); 
+        ifm.height=document.documentElement.clientHeight;
+      }
+      window.onresize=function(){  
+        changeFrameHeight();  
+      } 
+
+			//员工考勤跳转搜索
+			document.getElementById("all").onclick = function(){
+				document.getElementById("display").src = "all.html";
+        //single是调用接口数据的界面
+			}
+			
+			//部门
+      var ddlen = document.getElementById("department").getElementsByTagName("dd");
+      for(var i = 0; i < ddlen.length ; i++){
+  			ddlen[i].onclick = (function dejump(j){
+          return function(j){
+            // console.log(ddlen[j]);
+            document.getElementById("display").src = "depart.html";
+          }
+        })(i);
+      }
+	</script>
+</body>
+</html>

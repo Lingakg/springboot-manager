@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soecode.lyf.dao.MeetingDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryList" resultType="Meeting">
+        <!-- 具体的sql -->
+        SELECT
+        *
+        FROM
+        meething
+    </select>
+
+    <select id="byIdQuery" resultType="Meeting" parameterType="String">
+        <!-- 具体的sql -->
+        SELECT
+        *
+        FROM
+        meething
+        WHERE ID=#{id}
+    </select>
+
+    <!--<delete id="deleteWages" parameterType="int">-->
+        <!--delete from wages where id=#{id}-->
+    <!--</delete>-->
+    <delete id="byIdDelete" parameterType="String">
+        delete from meething where ID=#{id}
+    </delete>
+
+    <update id="byIdChange" parameterType="Meeting" >
+        update meething set
+            department=#{department},
+            ID=#{ID},
+            custom=#{custom},
+            name=#{name},
+            should=#{should},
+            reals=#{reals},
+            late=#{late},
+            leavs=#{leavs},
+            absent=#{absent},
+            overtime=#{overtime},
+            outs=#{outs},
+            businessout=#{businessout},
+            time=#{time},
+            shSign=#{shSign},
+            sign=#{sign},
+            signOut=#{signOut},
+            noSign=#{noSign},
+            noSignout=#{noSignout},
+            leaves=#{leaves},
+            officialOut=#{officialOut},
+            sickLeave=#{sickLeave},
+            affairLeave=#{affairLeave},
+            homeLeave=#{homeLeave},
+            ordinary=#{ordinary},
+            weekend=#{weekend},
+            holiday=#{holiday},
+            attendTime=#{attendTime},
+            ordinaryOvertime=#{ordinaryOvertime},
+            weekendOvertime=#{weekendOvertime},
+            holidayOvertime=#{holidayOvertime}
+            where ID = #{ID}
+
+
+    </update>
+
+    <insert id="insertList" parameterType="Meeting"
+            useGeneratedKeys="true">
+        insert into meething(
+            department,
+            ID,
+            custom,
+            name,
+            should,
+            reals,
+            late,
+            leavs,
+            absent,
+            overtime,
+            outs,
+            businessout,
+            time,
+            shSign,
+            sign,
+            signOut,
+            noSign,
+            noSignout,
+            leaves,
+            officialOut,
+            sickLeave,
+            affairLeave,
+            homeLeave,
+            ordinary,
+            weekend,
+            holiday,
+            attendTime,
+            ordinaryOvertime,
+            weekendOvertime,
+            holidayOvertime
+        )
+        values(
+        #{department},
+        #{ID},
+        #{custom},
+        #{name},
+        #{should},
+        #{reals},
+        #{late},
+        #{leavs},
+        #{absent},
+        #{overtime},
+        #{outs},
+        #{businessout},
+        #{time},
+        #{shSign},
+        #{sign},
+        #{signOut},
+        #{noSign},
+        #{noSignout},
+        #{leaves},
+        #{officialOut},
+        #{sickLeave},
+        #{affairLeave},
+        #{homeLeave},
+        #{ordinary},
+        #{weekend},
+        #{holiday},
+        #{attendTime},
+        #{ordinaryOvertime},
+        #{weekendOvertime},
+        #{holidayOvertime}
+        )
+    </insert>
+
+
+</mapper>

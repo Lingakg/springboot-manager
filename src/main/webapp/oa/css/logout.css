@@ -1,0 +1,25 @@
+body{
+	background-image: url(../img/index.jpg);
+}
+h2{
+	margin-top: 150px;
+	text-align: center;
+	font-size: 30px;
+}
+.homepages{
+	margin: 0 auto;
+	text-align: center;
+}
+.username{
+	margin-top: 50px;
+	margin-bottom: 30px;
+	outline: none;
+}
+.password{
+	margin-bottom: 30px;
+	outline: none;
+}
+#sbtn1{
+	margin-left: 25px;
+	margin-right: 15px;
+}

@@ -1,0 +1,69 @@
+{
+	"employees" : [{
+			"id" : "1",
+			"username" : "张三",
+			"sex" : "销售部",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "12000",
+			"taxrate" : "10%",
+			"realwages" : "10800"
+		},
+		{
+			"id" : "2",
+			"username" : "李四",
+			"sex" : "girl",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "13000",
+			"taxrate" : "10%",
+			"realwages" : "11800"
+		},
+		{
+			"id" : "3",
+			"username" : "王五",
+			"sex" : "girl",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "14000",
+			"taxrate" : "10%",
+			"realwages" : "12800"
+		},
+		{
+			"id" : "4",
+			"username" : "赵六",
+			"sex" : "girl",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "15000",
+			"taxrate" : "10%",
+			"realwages" : "13800"
+		},
+		{
+			"id" : "5",
+			"username" : "小明",
+			"sex" : "girl",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "16000",
+			"taxrate" : "10%",
+			"realwages" : "14800"
+		},
+		{
+			"id" : "6",
+			"username" : "小芳",
+			"sex" : "girl",
+			"department" : "技术部", 
+			"post" : "java工程师",
+			"laborhour" : "90h",
+			"salarybeforetax" : "17000",
+			"taxrate" : "10%",
+			"realwages" : "15800"
+		}
+	]
+}

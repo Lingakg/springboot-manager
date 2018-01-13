@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soecode.lyf.dao.WagesDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryList" resultType="Wages">
+        <!-- 具体的sql -->
+        SELECT
+        *
+        FROM
+        wages
+    </select>
+
+
+    <delete id="deleteWages" parameterType="int">
+        delete from wages where id=#{id}
+    </delete>
+
+
+    <update id="updateWages" parameterType="Wages" >
+        update user set
+            name=#{name}
+            cardNo=#{cardNo}
+            job=#{job}
+            basicWages=#{basicWages}
+            coefficient=#{coefficient}
+            restWages=#{restWages}
+            trunDay=#{trunDay}
+            TRUEWages=#{TRUEWages}
+            seniority=#{seniority}
+            other=#{other}
+            otherWages=#{otherWages}
+            allowance=#{allowance}
+            deduction=#{deduction}
+            actualWages=#{actualWages}
+            writeName=#{writeName}
+            DATENo=#{DATENo}
+            business=#{business}
+         where id=#{id}
+    </update>
+
+    <insert id="addWages" parameterType="Wages"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into user(name,cardNo,job,basicWages,coefficient,restWages,trunDay,TRUEWages,seniority,other,otherWages,allowance,deduction,actualWages,writeName,DATENo,business)
+        values(
+        #{name},
+        #{cardNo},
+        #{job},
+        #{basicWages},
+        #{coefficient},
+        #{restWages},
+        #{trunDay},
+        #{TRUEWages},
+        #{seniority},
+        #{other},
+        #{otherWages},
+        #{allowance},
+        #{deduction},
+        #{actualWages},
+        #{writeName},
+        #{DATENo},
+        #{business}
+        )
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,39 @@
+{
+	"employees" : [{
+			"id" : "1",
+			"username" : "张三",
+			"sex" : "男",
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "12800",
+			"right" : ""
+		},
+		{
+			"id" : "2",
+			"username" : "李四",
+			"sex" : "男",
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "11800",
+			"right" : ""
+		},
+		{
+			"id" : "3",
+			"username" : "王五",
+			"sex" : "男",
+			"city" : "技术部", 
+			"sign" : "java工程师",
+			"experience" : "90h",
+			"score" : "13000",
+			"classify" : "10%",
+			"wealth" : "13800",
+			"right" : ""
+		}
+	]
+}

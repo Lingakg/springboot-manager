@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>所有员工页面</title>
+		<link rel="stylesheet" href="css/first.css" />	
+  		<link rel="stylesheet" href="./css/layui.css" media="all">
+	</head>
+	<body>
+		<span class="layui-breadcrumb" lay-separator="-">
+		  <a href="">考勤系统</a>
+		  <a href="">考勤管理</a>
+		  <a href="">员工考勤</a>
+		  <!--<a><cite>正文</cite></a>-->
+		</span>
+			<table>
+				<tr id="header_th">
+					<th>编号</th>
+					<th>姓名</th>
+					<th>部门</th>
+					<th>职务</th>
+					<th>基本工资</th>
+					<th>系数</th>
+					<th>日工资</th>
+					<th>出勤天数</th>
+					<th>工龄工资</th>
+					<th>顶班天数</th>
+					<th>顶班工资</th>
+					<th>津贴</th>
+					<th>应发工资</th>
+					<th>个人所得税</th>
+					<th>五险</th>
+					<th>公积金</th>
+					<th>奖金</th>
+					<th>罚金</th>
+					<th>实发工资</th>
+					<th>银行卡号</th>
+					<th>操作</th>
+				</tr>
+				<tr id="header_conten">
+					<td>000001</td>
+					<td>泰勒乐</td>
+					<td>销售部</td>
+					<td>销售经理</td>
+					<td id="basic">4700</td>
+					<td class="coe"><input type="text" id="coef" /></td>
+					<td id="dayWage">180</td>
+					<td id="day">25</td>
+					<td id="workAge">160</td>
+					<td id="extra">3</td>
+					<td id="extraWage">140</td>
+					<td id="allowance">200</td>
+					<td id="shWage"></td>
+					<td id="perWage">3%</td>
+					<td id="five">500</td>
+					<td id="reserved">1000</td>
+					<td id="reward">300</td>
+					<td id="punish">100</td>
+					<td id="realWage"></td>
+					<td class="bank"><input type="text" name="bank"  value="" /></td>
+					<td>
+					  <button id="add">增加</button>
+					  <br/>
+					  <button id="modify">修改</button>
+					  <br/>
+					  <button id="delete">删除</button>
+					  <br/>
+					  <button id="real">实际工资</button>
+					</td>
+				</tr>
+			</table>
+			
+	</body>
+</html>
+<script>
+  window.onload = function(){
+  	document.getElementById("real").onclick = function(){
+  		var coe = document.getElementById("coef").value;
+  		var day = document.getElementById("day").innerText;
+  		var basic = parseFloat(document.getElementById("basic").innerText);
+  		var workAge = parseFloat(document.getElementById("workAge").innerText);
+  		var extra = parseFloat(document.getElementById("extra").innerText);
+  		var extraWage = parseFloat(document.getElementById("extraWage").innerText);
+  		var allowance = parseFloat(document.getElementById("allowance").innerText);
+  		var shWage = parseFloat(document.getElementById("shWage").innerText);
+  		var perWage = parseFloat(document.getElementById("perWage").innerText);
+  		var five = parseFloat(document.getElementById("five").innerText);
+  		var reserved = parseFloat(document.getElementById("reserved").innerText);
+  		var reward = parseFloat(document.getElementById("reward").innerText);
+  		var punish = parseFloat(document.getElementById("punish").innerText);
+  		var realWage = document.getElementById("realWage");
+  		var dayWage = parseFloat(document.getElementById("dayWage").innerText);
+  		console.log(coe);
+  		var realWagetax = basic * coe + reward - punish;
+  		console.log(realWagetax);
+  		realWage.innerText = realWagetax;
+  		/*if(coe == "undefined"){
+  			alert("您还没有输入改员工的系数哦~");
+  		}
+  		else{
+  			var realWagetax = basic * coe + reward - punish;
+  			console.log(realWagetax);
+  			document.getElementById(realWage).innerText = realWage;
+  		}*/
+  	}
+  }
+</script>
+
+<script type="text/javascript">
+	//修改
+	var modify = document.getElementById("modify");
+
+	//删除
+	var del = document.getElementById("delete");
+	console.log(document.getElementsByTagName("table")[0].getElementsByTagName("tr")[1]);
+	del.onclick = function() {
+		document.getElementsByTagName("table")[0].removeChild(document.getElementsByTagName("table")[0].getElementsByTagName("tr")[1]);
+	}
+</script>

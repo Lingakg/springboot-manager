@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>all</title>
+    <link rel="stylesheet" type="text/css" href="demos.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="./css/jsgrid.css" />
+    <link rel="stylesheet" type="text/css" href="./css/theme.css" />
+
+    <script src="./external/jquery/jquery-1.8.3.js"></script>
+    <script src="db.js"></script>
+
+    <script src="./src/jsgrid.core.js"></script>
+    <script src="./src/jsgrid.load-indicator.js"></script>
+    <script src="./src/jsgrid.load-strategies.js"></script>
+    <script src="./src/jsgrid.sort-strategies.js"></script>
+    <script src="./src/jsgrid.field.js"></script>
+    <script src="./src/fields/jsgrid.field.text.js"></script>
+    <script src="./src/fields/jsgrid.field.number.js"></script>
+    <script src="./src/fields/jsgrid.field.select.js"></script>
+    <script src="./src/fields/jsgrid.field.checkbox.js"></script>
+    <script src="./src/fields/jsgrid.field.control.js"></script>
+    <link rel="stylesheet" href="./css/layui.css" media="all">
+</head>
+<body>
+    <div>
+        <span class="layui-breadcrumb" lay-separator="-">
+          <a href="">考勤系统</a>
+          <a href="">考勤管理</a>
+          <a href="">员工考勤</a>
+          <!--<a><cite>正文</cite></a>-->
+        </span>
+    </div>
+    <div id="jsGrid"></div>
+
+    <script>
+        $(function() {
+
+            $("#jsGrid").jsGrid({
+                height: "70%",
+                width: "100%",
+                filtering: true,
+                editing: true,
+                inserting: true,
+                sorting: true,
+                paging: true,
+                autoload: true,
+                pageSize: 15,
+                pageButtonCount: 5,
+                deleteConfirm: "确定删除?",
+                controller: db,
+                fields: [
+                    {name: "部门" , type : "text" , width : 18},
+                    {name: "考勤号码" , type : "number" , width : 12},
+                    {name: "姓名" , type : "text" , width : 18},
+                    {name: "应到" , type : "number" , width : 12},
+                    {name: "实到" , type : "number" , width : 12},
+                    {name: "迟到" , type : "number" , width : 12},
+                    {name: "早退" , type : "number" , width : 12},
+                    {name: "矿工" , type : "number" , width : 12},
+                    // {name: "overtime" , type : "number" , width : 12},
+                    {name: "外出" , type : "number" , width : 12},
+                    // {name: "buoutcome" , type : "number" , width : 12},
+                    {name: "工作时间" , type : "number" , width : 12},
+                    {name: "应签次数" , type : "number" , width : 12},
+                    {name: "签到" , type : "number" , width : 12},
+                    {name: "签退" , type : "number" , width : 12},
+                    // {name: "nosign" , type : "number" , width : 12},
+                    // {name: "nosignout" , type : "number" , width :12},
+                    {name: "请假（总）" , type : "number" , width : 12},
+                    {name: "公出" , type : "number" , width : 12},
+                    // {name: "sick" , type : "number" , width : 12},
+                    // {name: "thing" , type : "number" , width : 12},
+                    {name: "平日" , type : "number" , width :12},
+                    // {name: "personality" , type : "number" , width : 12},
+                    {name: "周末" , type : "number" , width : 12},
+                    // {name: "weekend" , type : "number" , width :12},
+                    // {name: "ho" , type : "number" , width : 12},
+                    {name: "出勤时间" , type : "number" , width : 12},
+                    {name: "加班（总）" , type : "number" , width : 12},
+                    // {name: "weekendover" , type : "number" , width : 12},
+                    // {name: "hoilday" , type : "number" , width :12},
+                    { type: "control" , width : 10}
+                ]
+            });
+
+        });
+    </script>
+
+    <script src="./js/layui.js"></script>
+
+</body>
+</html>

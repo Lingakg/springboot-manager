@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>搜索页面</title>
+  <link rel="stylesheet" href="./css/layui.css" media="all">
+</head>
+<body>
+ 
+	<span class="layui-breadcrumb" lay-separator="-">
+	  <a href="">考勤系统</a>
+	  <a href="">考勤管理</a>
+	  <a href="">员工考勤</a>
+	  <!--<a><cite>正文</cite></a>-->
+	</span>
+	<br />
+	<input type="text" placeholder="员工姓名" name="username" id="username"/>
+	<button>搜索</button>
+	<!--<input type="button" value="ajaxsubmit" onclick="ajax();"/>-->
+	<div id="disp"></div>
+	<table id="demo" lay-filter="test" style="text-align: center;"></table>
+ 
+	<script src="./js/layui.js"></script>
+<script src="js/jquery.min.js"></script>
+	<script>
+		layui.use('table', function(){
+		  var table = layui.table;
+		  
+		  table.render({
+		    elem: '#demo',
+			//height: 315,
+		    url: 'data.txt', //数据接口
+		    page: true, //开启分页
+		    
+		    cols: [[ //表头
+		      {field: 'id', title: '工号',sort: true, fixed: 'left'},
+		      {field: 'username', title: '姓名'},
+		      {field: 'department', title: '部门'},
+		      {field: 'post', title: '岗位'},
+		      {field: 'labor-hour', title: '基本工资'},
+		      {field: 'salary-before-tax', title: '系数'},
+		      {field: 'tax-rate', title: '出勤天数'},
+		      {field: 'real-wages', title: '工龄工资'},
+		      {field: 'real-wages', title: '顶班天数'},
+		      {field: 'real-wages', title: '顶班工资'},
+		      {field: 'real-wages', title: '津贴'},
+		      {field: 'real-wages', title: '月工资'},
+		      {field: 'real-wages', title: '个人所得税'},
+		      {field: 'real-wages', title: '五险'},
+		      {field: 'real-wages', title: '住房公积金'},
+		      {field: 'real-wages', title: '罚款'},
+		      {field: 'real-wages', title: '奖金'},
+		      {field: 'real-wages', title: '应发工资'},
+		      {field: 'real-wages', title: '银行卡号'}
+		    ]]
+		  });
+		});
+	
+		layui.use('element', function(){
+		  var element = layui.element;
+		});
+		
+		var ajax = function(){
+		$.getJSON("data.txt",function(data){
+			$.each(data, function(i,item) {
+				$("#disp").append("<p>" + item[0].id + "</p>");
+				$("#disp").append("<p>" + item[1].id + "</p>");
+				console.log(item[1].id);
+			});
+		})
+	}
+	</script>
+</body>
+</html>
